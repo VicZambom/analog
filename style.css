@@ -1,8 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(4, 1, 16);
-    position: relative;
-    top: 350px;
-    left: 1050px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .clock {
     width: 350px;
@@ -10,10 +17,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(./clock.png);
+    filter: brightness(125%);
+    backdrop-filter: blur(20px);
     background-size: cover;
     border: 4px solid #091921;
     border-radius: 50%;
+    box-shadow: 25px 25px 20px #091921;
 }
 
 .clock::before {
