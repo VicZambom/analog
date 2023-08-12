@@ -26,6 +26,25 @@ body {
     z-index: 10000;
 }
 
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
 
+.clock .hour, .hr {
+    width: 160px;
+    height: 160px;
+}
+
+.clock .min, .mn {
+    width: 190px;
+    height: 190px;
+}
+
+.clock .sec, .sc {
+    width: 230px;
+    height: 230px;
+}
 
 
