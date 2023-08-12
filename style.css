@@ -47,4 +47,9 @@ body {
     height: 230px;
 }
 
-
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
