@@ -1,16 +1,21 @@
-const deg = 6
-const hr = document.querySelector('#hr')
-const mn = document.querySelector('#mn')
-const sc = document.querySelector('#sc')
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
+
+function getTime() {
+    const time = new Date();
+
+    let hh = (360 /12) * time.getHours();
+    let mm = (360 /60) * time.getMinutes();
+    let ss = (360 /60) * time.getSeconds();
+
+    hr.style.transform = `rotateZ(${hh}deg)`;
+    mn.style.transform = `rotateZ(${mn}deg)`;
+    sc.style.transform = `rotateZ(${sc}deg)`;
+}
 
 setInterval(() => {
-    const day = new Date()
-    let hh = day.getHours() * 30
-    let mm = day.getMinutes() * deg
-    let ss = day.getSeconds() * deg
+    getTime();
+}, 1000);
 
-    hr.style.transform = `rotateZ(${hh + mm / 12}deg)`
-    mn.style.transform = `rotateZ(${mn}deg)`
-    sc.style.transform = `rotateZ(${sc}deg)`
-}
-)
+getTime();
