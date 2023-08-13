@@ -1,9 +1,26 @@
+
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc')
+
+
+
 const getTime = () => {
     const date = new Date();
-    console.log(date.getHours());
-    console.log(date.getMinutes());
-    console.log(date.getSeconds());
+
+    return {
+        hour: date.getHours(),
+        min: date.getMinutes(),
+        sec: date.getSeconds()
+    };
 }
 
-getTime();
+setInterval(() => {
+
+    const {sec, min, hour} = getTime()
+    sc.style.transform = 'rotate(${sec * 6}deg)'
+    mn.style.transform = 'rotate(${min * 6}deg)'
+    hr.style.transform = 'rotate(${hour}deg)'
+}, 1000);
+
 

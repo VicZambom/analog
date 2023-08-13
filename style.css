@@ -12,11 +12,12 @@ body {
     justify-content: center;
 }
 .clock {
-    width: 350px;
-    height: 350px;
+    min-width: 350px;
+    min-height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url(./clock.png);
     filter: brightness(125%);
     backdrop-filter: blur(20px);
     background-size: cover;
